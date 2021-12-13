@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!-- head -->
+{% include 'head.html' %}
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{% static 'dist/img/AdminLTELogo.png' %}" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  {% include 'navbar.html' %}
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+
+  {% include 'sidebar.html' %}
+
+  <!-- Content Wrapper. Contains page content -->
+  
+  {% include 'body.html' %}
+  
+  <!-- /.content-wrapper -->
+  {% include 'footer.html' %}
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+{% include 'script.html' %}
+</body>
+</html>
