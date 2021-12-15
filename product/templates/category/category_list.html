@@ -34,7 +34,7 @@
                 {% for cat in categories %}                          
                     <tr>                                                                                    
                       <td>{{cat.category_name}}</td>
-                      <td><a class="text-success" href="">Update</a> || <a class="text-danger" href="">Delete</a></td>                      
+                      <td><a class="text-success" href="{% url 'product:update_category_url' cat.category_name %}">Update</a> || <a class="text-danger" href="{% url 'product:delete_category_url' cat.category_name %}">Delete</a></td>                      
                     </tr>                  
                 {% endfor %}                
             </tbody>

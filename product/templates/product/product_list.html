@@ -45,7 +45,7 @@
                       <td>{{pro.category.category_name}}</td>    
                       <td>{{pro.country.country_name}}</td>    
                       <td>{{pro.seller.seller_name}}</td>    
-                      <td><a class="text-success" href="">Update</a> || <a class="text-danger" href="">Delete</a></td>                      
+                      <td><a class="text-success" href="{% url 'product:update_product_url' pro.product_name %}">Update</a> || <a class="text-danger" href="{% url 'product:delete_product_url' pro.product_name %}">Delete</a></td>                      
                     </tr>                  
                 {% endfor %}                
             </tbody>
