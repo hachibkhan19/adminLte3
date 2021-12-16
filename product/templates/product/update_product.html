@@ -46,7 +46,7 @@
                     <label for="country" class="text-secondary"><small>Country Name*</small></label>
                     <select name="country" id="" class="form-control" required>
                         {% for country in countries %}                          
-                            <option value="{{country.id}}">{{country.country_name}}                                     
+                            <option value="{{country.id}}" {% if product.country.id == country.id %} selected {% endif %}>{{country.country_name}}                                     
                             </option>                                                   
                         {% endfor %}                        
                     </select>                   
@@ -55,7 +55,7 @@
                     <label for="category" class="text-secondary"><small>Seller Name*</small></label>
                     <select name="seller" id="" class="form-control" required>
                         {% for seller in sellers %}                          
-                            <option value="{{seller.id}}">{{seller.seller_name}}                                     
+                            <option value="{{seller.id}}" {% if product.seller.id == seller.id %} selected {% endif %}>{{seller.seller_name}}                                     
                             </option>                                                   
                         {% endfor %}                        
                     </select>                   
@@ -64,7 +64,8 @@
                     <label for="category" class="text-secondary"><small>Category Name*</small></label>
                     <select name="category" id="" class="form-control" required>
                         {% for cat in categories %}                          
-                            <option value="{{cat.id}}">{{cat.category_name}}                                     
+                            <option value="{{cat.id}}" {% if product.category.id == cat.id %} selected {% endif %}>{{cat.category_name}}      
+                                             
                             </option>                                                   
                         {% endfor %}                        
                     </select>                   
